@@ -37,7 +37,7 @@
                 console.log(data);
                 let conteo = 1;
                 data.forEach((a) => {
-                    //if(){                    
+                    if(a.info.order.value == "Passeriformes - Suborden Tyranni"){                    
                     grid.innerHTML += `
                         <div class="grid-item">
                             <img src="${a.image.url.replace("http://www.buscaves.cl/", "https://buscaves.cl/")}" alt="${a.names.spanish}"/>
@@ -46,7 +46,7 @@
                         </div>
                     `;
                     conteo++;
-                    //};
+                    };
                 });
             } catch (error) {
                 console.error('Error al cargar los datos:', error);
